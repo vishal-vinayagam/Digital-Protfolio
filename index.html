@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Global Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #1e272e;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+
+        .side-menu {
+            list-style: none;
+            background: #16a085;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .side-menu li {
+            margin: 10px 0;
+        }
+
+        .side-menu a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+
+        .side-menu a:hover {
+            background: #1abc9c;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 36px;
+            color: #1abc9c;
+        }
+
+        /* Home Section - Full Screen */
+        .home-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            height: 100vh; /* Full screen height */
+        
+            padding: 0 50px;
+            box-sizing: border-box;
+        }
+
+        .profile-pic img {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .content h1 {
+            font-size: 60px;
+            color: #fff;
+        }
+
+        .content span {
+            color: #f1c40f;
+        }
+
+        .content p {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #f1c40f;
+            color: #333;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-size: 18px;
+        }
+
+        .btn:hover {
+            background: #e67e22;
+            color: #fff;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .skill {
+            text-align: center;
+            padding: 30px;
+            border: 1px solid #16a085;
+            border-radius: 8px;
+            transition: 0.3s;
+            width: 200px;
+            background: #2c3e50;
+        }
+
+        .skill:hover {
+            background: #1abc9c;
+        }
+
+        .skill i {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #f1c40f;
+        }
+
+        /* Projects Section */
+        .projects-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            background: #2c3e50;
+            padding: 30px;
+            border-radius: 8px;
+            transition: 0.3s;
+            width: 32%;
+            text-align: center;
+            color: #fff;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            background: #1abc9c;
+        }
+
+        .certifications-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .certification-card {
+            background: #2c3e50;
+            padding: 30px;
+            border-radius: 8px;
+            transition: 0.3s;
+            width: 32%;
+            text-align: center;
+            color: #fff;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-10px);
+            background: #1abc9c;
+        }
+        /* Contact Section */
+       
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-container .contact-info {
+            text-align: left;
+        }
+
+        .footer-container .social-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #f1c40f;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<header>
+    <nav>
+        <ul class="side-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Home Section - Full Screen -->
+<section id="home" class="home-container">
+    <div class="profile-pic">
+        <img src="./image-photo.jpg" alt="Profile Picture"> 
+    </div>
+    <div class="content">
+        <h1>Hi, I'm <span>Vishal</span></h1>
+        <p>Creative Developer & Designer</p>
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="C:\Users\vvish\OneDrive\Desktop\sathish\portfolio\Resume.pdf" download="Vishal_Resume" class="btn btn-resume">
+            <i class="fas fa-download"></i> Download My Resume
+        </a>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+        <div class="skill"><i class="fab fa-html5"></i><br> HTML</div>
+        <div class="skill"><i class="fab fa-css3-alt"></i><br> CSS</div>
+        <div class="skill"><i class="fab fa-js"></i><br> JavaScript</div>
+        <div class="skill"><i class="fas fa-video"></i> VideoEditing</div>
+        <div class="skill"><i class="fas fa-paint-brush"></i><br> Designing</div>
+        <div class="skill"><i class="fas fa-laptop-code"></i><br> UI/UX</div>
+        <div class="skill"><i class="fas fa-camera"></i> PhotoEditing</div>
+
+        
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+        <div class="project-card">TripTraverse</div>
+        <div class="project-card">Blackjack Game</div>
+        <div class="project-card">Chrome Dino</div>
+        <div class="project-card">Candy-Crush</div>
+        <div class="project-card">Puzzle-Game</div>
+        <div class="project-card">To-Do-List</div>
+        <div class="project-card">Contact-Form</div>
+        <div class="project-card">Stop-Watch</div>
+        <div class="project-card">Quiz-App</div>
+
+    </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications">
+    <h2>I Geted Certifications On</h2>
+    <div class="certifications-container">
+        <div class="certification-card">Infosys</div>
+        <div class="certification-card">TCS iON</div>
+        <div class="certification-card">Great Learning</div>
+        <div class="certification-card">Acenture</div>
+        <div class="certification-card">LinkedIn</div>
+        <div class="certification-card">Microsoft</div>
+        <div class="certification-card">Haker Rank</div>
+        <div class="certification-card">IBM SkillsBuild</div>
+        <div class="certification-card">Udemy</div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+
+<footer>
+    <div class="footer-container">
+        <div class="contact-info">
+            <p>📞 Phone: +91 9345457411</p>
+            <p>📧 Email: <a href="mailto:v.vishal122005@gmail.com">v.vishal122005@gmail.com</a></p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/vishal-v-053a9128b/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/vishal-vinayagam"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+    <p>© 2025 Vishal</p>
+</footer>
+</body>
+</html>
